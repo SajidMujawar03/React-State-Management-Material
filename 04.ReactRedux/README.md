@@ -123,6 +123,6 @@ Consider a simple counter app:
 - Debug with Redux DevTools for time-traveling through state changes.
 
 ## Conclusion
-
+```
 React + Redux provides a robust architecture for scalable apps. The diagrams above highlight the predictable, one-way data flow that makes debugging and maintenance easier. For hands-on learning, try building a simple todo app with these concepts!
 ```
