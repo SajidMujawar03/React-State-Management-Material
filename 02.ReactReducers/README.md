@@ -5,6 +5,7 @@ This is a simple React application that demonstrates the use of the `useReducer`
 ## Concept of Reducers
 
 In React, a reducer is a pure function that takes the current state and an action as arguments and returns a new state. It is inspired by the Redux library but can be used directly in React functional components via the `useReducer` hook.
+The Reducer function does not mutate the state directly; instead, it returns a new state object based on the action received.Also it is a pure function, meaning it does not produce side effects and always returns the same output for the same input.Means it does not have asynchronous operations or API calls.
 
 ### How Reducers Work
 - **State**: Represents the current data or condition of the application (e.g., `{ count: 0 }`).
