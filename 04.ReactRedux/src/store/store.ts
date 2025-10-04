@@ -1,5 +1,11 @@
 import { createStore } from "redux";
 
+declare global {
+  interface Window {
+    __REDUX_DEVTOOLS_EXTENSION__?: () => void;
+  }
+}
+
 // Use primitive 'string' instead of 'String'
 type User = {
   name: string;
@@ -40,8 +46,7 @@ const reducer = (state: State = initialState, action: Action): State => {
 // Create store
 const store = createStore(
   reducer,
-  (window as any).__REDUX_DEVTOOLS_EXTENSION__ &&
-    (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 export default store;
